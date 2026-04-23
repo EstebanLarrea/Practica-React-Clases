@@ -1,6 +1,6 @@
 import { use, useState } from "react";
 
-function Suma() {
+function Suma({ volverAtras }) {
   const [num, setNum] = useState("");
   const [num2, setNum2] = useState("");
 
@@ -36,6 +36,7 @@ function Suma() {
       >
         Sumar
       </button>
+      <button onClick={volverAtras}>Go back</button>
     </div>
   );
 }
