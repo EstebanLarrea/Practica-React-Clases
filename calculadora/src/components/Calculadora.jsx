@@ -23,15 +23,19 @@ function Calculadora({ volverAtras }) {
         <button onClick={() => agragarValores("1")}>1</button>
         <button onClick={() => agragarValores("2")}>2</button>
         <button onClick={() => agragarValores("3")}>3</button>
+        <br></br>
         <button onClick={() => agragarValores("4")}>4</button>
         <button onClick={() => agragarValores("5")}>5</button>
         <button onClick={() => agragarValores("6")}>6</button>
+        <br></br>
         <button onClick={() => agragarValores("7")}>7</button>
         <button onClick={() => agragarValores("8")}>8</button>
         <button onClick={() => agragarValores("9")}>9</button>
+        <br></br>
         <button onClick={() => agragarValores("0")}>0</button>
         <button onClick={() => agragarValores("+")}>+</button>
         <button onClick={() => agragarValores("-")}>-</button>
+        <br></br>
         <button onClick={() => agragarValores("*")}>*</button>
         <button onClick={() => agragarValores("/")}>/</button>
         <button onClick={validacion}>=</button>

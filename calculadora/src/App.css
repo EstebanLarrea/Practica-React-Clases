@@ -182,3 +182,102 @@
     border-right-color: var(--border);
   }
 }
+
+/* --- ESTILOS GENERALES --- */
+.dashboard {
+  padding: 20px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.buscador {
+  padding: 10px;
+  width: 300px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.btn-volver {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* --- LA CUADRÍCULA (4 en fila y Responsivo) --- */
+.grid-personajes {
+  display: grid;
+  /* Esto crea columnas que se adaptan. Mínimo 200px, máximo 1 fracción */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Centra la cuadrícula en la pantalla */
+}
+
+/* Forzamos 4 en fila en pantallas grandes */
+@media (min-width: 1024px) {
+  .grid-personajes {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.tarjeta {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer; /* Cambia el mouse a una manito */
+  transition: transform 0.2s; /* Animación suave */
+  background-color: white;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px); /* Salta un poquito al pasar el mouse */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.tarjeta img {
+  width: 100%;
+  border-radius: 50%; /* Hace la imagen redonda */
+}
+
+/* --- LA VENTANA FLOTANTE (Modal) --- */
+.modal-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscurecido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asegura que esté por encima de todo */
+}
+
+.modal-contenido {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  position: relative;
+  width: 300px;
+  text-align: left;
+}
+
+.modal-contenido img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.btn-cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: red;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}

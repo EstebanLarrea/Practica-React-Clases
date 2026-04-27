@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Suma from "./components/Suma";
 import Calculadora from "./components/Calculadora";
+import Api from "./components/Api";
 
 function App() {
   const [pantalla, setPantalla] = useState("inicio");
@@ -18,6 +19,10 @@ function App() {
     return <Calculadora volverAtras={goBack} />;
   }
 
+  if (pantalla === "api") {
+    return <Api volverAtras={goBack} />;
+  }
+
   return (
     <div className="menu-principal">
       <h1>Menú Principal</h1>
@@ -25,6 +30,7 @@ function App() {
       <button onClick={() => setPantalla("calculadora")}>
         Ir a la Calculadora
       </button>
+      <button onClick={() => setPantalla("api")}>Api</button>
     </div>
   );
 }
